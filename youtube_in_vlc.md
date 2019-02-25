@@ -1,6 +1,6 @@
 # Запуск youtube ролика в проигрывателе VLC
 
-
+```
   # dnf install xsel vlc
   $ touch youtubeinvlc
   $ nano youtubeinvlc
@@ -11,3 +11,4 @@
 
   $ chmod 777 ./youtubeinvlc
   $ mv ./seltr /usr/bin/youtubeinvlc
+```
