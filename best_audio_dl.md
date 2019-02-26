@@ -1,8 +1,8 @@
 # Сохранение аудио ролика в указанную директорию
 
-Установка `xsel` и `youtube-dl` в Fedora. Для других дистрибутивов используйте иные пакетные менеджеры. Запуск от `root` (#) или `su`.
+Установка `xsel`, `youtube-dl` и `ffmpeg` в Fedora. Для других дистрибутивов используйте иные пакетные менеджеры. Запуск от `root` (#) или `su`.
 ```
-# dnf install xsel youtube-dl
+# dnf install xsel youtube-dl ffmpeg
 ```
 Создание текстового документа в редакторе nano.
 ```
@@ -16,6 +16,11 @@ youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-quality 0 -o '~/
 ```
 Аудио файл лучшего качества будет загружаться в директорию `~/YouTubeDL/Audio/<название плейлиста>/<название файла>`.
 
+Если требуется конвертация файла в mp3, например, то следует добавить флаг `--audio-format mp3`. Таким образом, последняя строчка будет выглядеть так.
+```
+youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o '~/YouTubeDL/Audio/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' $url
+```
+
 Предоставляем полные права на чтение, модификацию и исполнение всем пользователям.
 ```
 # chmod 777 ./best_audio_dl
@@ -28,4 +33,4 @@ $ mv ./best_audio_dl /usr/bin
 
 При нажатии установленного сочетания клавиш произойдет загрузка аудио файла в указанную директорию источник будет выбран тот, ссылка на который будет или выделена в момент нажатия хоткея или находиться в буфере обмена.
 
-Т.к. используется youtube-dl - [https://github.com/rg3/youtube-dl](https://github.com/rg3/youtube-dl) список источников довольно широк, т.е. это не только youtube, как впрочем и список доступных опций.
+Так как используется youtube-dl - [github.com/rg3/youtube-dl](https://github.com/rg3/youtube-dl) список источников довольно широк (youtube, soundcloud, ted и прочие - [rg3.github.io/youtube-dl/supportedsites.html](https://rg3.github.io/youtube-dl/supportedsites.html)), как впрочем и список доступных опций.
