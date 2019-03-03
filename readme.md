@@ -12,7 +12,7 @@ CentOS	| .rpm	| `yum`
 Fedora	| .rpm	| `dnf`, `yum`
 FreeBSD	| Ports, .txz	| `make`, `pkg`
 
-Источник - [digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg](https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg)
+[digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg](https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg)
 
 В качестве текстового редактора я привожу `nano` (как более простого и понятного), но нет никаких причин неиспользования иного, например - `vi`.
 
