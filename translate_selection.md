@@ -1,8 +1,11 @@
 # Перевод выделенного текста
 
-Установка `xsel` и `Translate Shell` в Fedora. Для других дистрибутивов используйте иные пакетные менеджеры. Запуск от `root` (#) или `su`.
+Установка `xsel` в Fedora.
 ```
 # dnf install xsel
+```
+Клонирование github репозитория и установка `Translate Shell`.
+```
 $ git clone https://github.com/soimort/translate-shell
 $ cd translate-shell/
 $ make
@@ -19,8 +22,6 @@ text=$(xsel -o)
 translate=$(trans -b "$text")
 notify-send -u critical "$text" "$translate"
 ```
-Результат перевода будет выведен в форме системного уведомления.
-
 Предоставляем полные права на чтение, модификацию и исполнение всем пользователям.
 ```
 # chmod 777 ./translate_selection
@@ -29,4 +30,4 @@ notify-send -u critical "$text" "$translate"
 ```  
 $ mv ./translate_selection /usr/bin
 ```
-Для использования по хоткею указываем имя скрипта `translate_selection` в настройках горячих клавиш.
+Для использования по хоткею указываем имя скрипта `translate_selection` в настройках горячих клавиш. Теперь, при нажатии выбранного хоткея, будет происходить перевод выделенного в этот момент фрагмента текста или фрагмента находящегося буфере с помощью сервиса Google Translate и вывод результата перевода с помощью штатной системы нотификаций.

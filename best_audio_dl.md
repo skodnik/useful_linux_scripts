@@ -1,6 +1,6 @@
 # Сохранение аудио ролика в указанную директорию
 
-Установка `xsel`, `youtube-dl` и `ffmpeg` в Fedora. Для других дистрибутивов используйте иные пакетные менеджеры. Запуск от `root` (#) или `su`.
+Установка `xsel`, `youtube-dl` и `ffmpeg` в Fedora.
 ```
 # dnf install xsel youtube-dl ffmpeg
 ```
@@ -20,7 +20,6 @@ youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-quality 0 -o '~/
 ```
 youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o '~/YouTubeDL/Audio/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' $url
 ```
-
 Предоставляем полные права на чтение, модификацию и исполнение всем пользователям.
 ```
 # chmod 777 ./best_audio_dl
