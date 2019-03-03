@@ -6,13 +6,13 @@
 
 Operating System | Format |	Tool(s)
 ---|---|---
-Debian	| .deb	| apt, apt-cache, apt-get, dpkg
-Ubuntu	| .deb	| apt, apt-cache, apt-get, dpkg
-CentOS	| .rpm	| yum
-Fedora	| .rpm	| dnf
-FreeBSD	| Ports, .txz	| make, pkg
+Debian	| .deb	| `apt`, `apt-cache`, `apt-get`, `dpkg`
+Ubuntu	| .deb	| `apt`, `apt-cache`, `apt-get`, `dpkg`
+CentOS	| .rpm	| `yum`
+Fedora	| .rpm	| `dnf`, `yum`
+FreeBSD	| Ports, .txz	| `make`, `pkg`
 
-[https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg](https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg)
+Источник - [digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg](https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg)
 
 В качестве текстового редактора я привожу `nano` (как более простого и понятного), но нет никаких причин неиспользования иного, например - `vi`.
 
