@@ -15,8 +15,8 @@ $ nano translate_selection
 Содержание скрипта, вставить в файл `translate_selection`.
 ```
 #!/usr/bin/env bash
-text="$(xsel -o)"
-translate="$(trans -b $text)"
+text=$(xsel -o)
+translate=$(trans -b "$text")
 notify-send -u critical "$text" "$translate"
 ```
 Результат перевода будет выведен в форме системного уведомления.
