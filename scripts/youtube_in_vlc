@@ -1,3 +1,4 @@
- #!/usr/bin/env bash
- url="$(xsel -o)"
- vlc $url
+#!/usr/bin/env bash
+url="$(xsel -o)"
+vlc $url
+#cvlc $url
