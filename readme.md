@@ -14,7 +14,11 @@ FreeBSD	| Ports, .txz	| `make`, `pkg`
 
 [digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg](https://www.digitalocean.com/community/tutorials/package-management-basics-apt-yum-dnf-pkg)
 
-В качестве текстового редактора я привожу `nano` (как более простого и понятного), но нет никаких причин неиспользования иного, например - `vi`.
+В качестве текстового редактора я привожу `nano` (как более простого и понятного), но нет никаких причин неиспользования иного, например - `vim`.
+
+Непосредственно скрипты собраны  в директории `scripts`, а описания и пояснения к ним в `.md` файлах.
+В директории `aliases` - алиасы для использования в `.bashrc` или `.zshrc`, например.
+
 
 ## Ликбез
 - `#` - запуск команды **с правами root**
