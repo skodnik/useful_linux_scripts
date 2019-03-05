@@ -1,0 +1,4 @@
+ #!/usr/bin/env bash
+ url="$(xsel -o)"
+ vlc $url
+

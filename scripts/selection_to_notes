@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+text="$(xsel -o)"
+echo >> ~/notes.txt && date >> ~/notes.txt && echo "$text" >> ~/notes.txt && echo >> ~/notes.txt
+notify-send -u critical "Заметка добавлена" "$text"
