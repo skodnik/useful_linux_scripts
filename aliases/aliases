@@ -1,23 +1,35 @@
+# Download best audio single with convertion in mp3
 mp3 () {
     youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o '~/YouTubeDL/Audio/%(title)s.%(ext)s' "$1"
 }
 
+# Downoad best audio in playlist with convertion in mp3
 mp3p () {
     youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o '~/YouTubeDL/Audio/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "$1"
 }
 
+# Download single best audio
 ba () {
     youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-quality 0 -o '~/YouTubeDL/Audio/%(title)s.%(ext)s' "$1"
 }
 
+# Download best audio in playlist
 bap () {
     youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-quality 0 -o '~/YouTubeDL/Audio/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' "$1"
 }
 
+# Download single video
 dlv () {
     youtube-dl --ignore-errors -o '~/YouTubeDL/Video/%(title)s.%(ext)s' "$1"
 }
 
+# Download Video in playlist
 dlp () {
     youtube-dl --ignore-errors -o '~/YouTubeDL/Video/%(playlist)s/%(title)s.%(ext)s' "$1"
+}
+
+# Weather
+alias wtr='curl -H "Accept-Language: ru" wttr.in'
+wts () {
+    curl -H 'Accept-Language: ru' wttr.in/"$1"
 }
