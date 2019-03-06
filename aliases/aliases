@@ -33,3 +33,6 @@ alias wtr='curl -H "Accept-Language: ru" wttr.in'
 wts () {
     curl -H 'Accept-Language: ru' wttr.in/"$1"
 }
+
+# Terminal screensaver Matrix
+alias s='cmatrix -bs'
