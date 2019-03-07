@@ -2,3 +2,4 @@
 url="$(xsel -o)"
 vlc $url
 #cvlc $url
+#mpv $url
