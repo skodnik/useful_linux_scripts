@@ -41,7 +41,7 @@ alias s='cmatrix -bs'
 cr () {
      if [ -n "$1" ] 
      then
-         if [[ $1 == *cpt ]]
+         if [[ $1 == *.cpt ]]
          then
              ccdecrypt "$1" && echo "$1 расшифрован"
          else
@@ -51,3 +51,19 @@ cr () {
          echo "Не указано имя файла"
      fi
 } 
+
+# gpg
+gcr () {
+    if [ -n "$1" ]
+    then
+        if [[ $1 == *.gpg ]]
+        then
+            gpg "$1" && echo "$1 расшифрован"
+        else
+            gpg -c --cipher-algo aes256 "$1" && echo "$1 зашифрован"
+        fi
+    else 
+        echo "Не указано имя файла"
+    fi
+}
+
