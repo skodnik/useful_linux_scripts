@@ -36,3 +36,18 @@ wts () {
 
 # Terminal screensaver Matrix
 alias s='cmatrix -bs'
+
+# ccrypt/ccdecrypt 
+cr () {
+     if [ -n "$1" ] 
+     then
+         if [[ $1 == *cpt ]]
+         then
+             ccdecrypt "$1" && echo "$1 расшифрован"
+         else
+             ccrypt "$1" && echo "$1 зашифрован"
+         fi
+     else 
+         echo "Не указано имя файла"
+     fi
+} 
