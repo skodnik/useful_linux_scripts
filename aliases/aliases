@@ -67,3 +67,5 @@ gcr () {
     fi
 }
 
+# Total traffic counter
+alias t="TX=\`netstat -i | grep -e \"ens3\" -m 1 | awk '{print \$7}'\` && RX=\`netstat -i | grep -e \"ens3\" -m 1 | awk '{print \$3}'\` && let \"STAT=(\$RX + \$TX)/1024\" && echo \"Total:\" \$STAT \"mb\""
