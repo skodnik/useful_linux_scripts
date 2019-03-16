@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 url="$(xsel -o)"
-youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o '~/YouTubeDL/Audio/%(playlist)s/%(playlist_index)s - %(title)s.%(ext)s' $url
+title="$(youtube-dl -e $url)"
+notify-send -u critical "Начало загрузки аудио mp3" "$title - $url"
+youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-format mp3 --audio-quality 3 --embed-thumbnail --metadata-from-title "%(title)s" --add-metadata -o '~/YouTubeDL/Audio/%(playlist)s/%(title)s-%(upload_date)s.%(ext)s' $url && notify-send -u critical "Успешно загружено" "$title - $url"
