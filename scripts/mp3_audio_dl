@@ -8,5 +8,5 @@ if title="$(youtube-dl -e $url)" ; then
         notify-send -u critical "Ошибка загрузки" "$title - $url"
     fi
 else
-    notify-send -u critical "Ошибка обработки ссылки" ""
+    notify-send -u critical "Ошибка обработки ссылки" "$url"
 fi
