@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 url="$(xsel -o)"
-title="$(youtube-dl -e $url)"
-notify-send -u critical "Начало загрузки аудио mp3" "$title - $url"
-youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-format mp3 --audio-quality 3 --embed-thumbnail --metadata-from-title "%(title)s" --add-metadata -o '~/YouTubeDL/Audio/%(playlist)s/%(title)s-%(upload_date)s.%(ext)s' $url && notify-send -u critical "Успешно загружено" "$title - $url"
+if title="$(youtube-dl -e $url)" ; then
+    notify-send -u critical "Начало загрузки аудио mp3/q3" "$title - $url"
+    if  youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-format mp3 --audio-quality 3 --embed-thumbnail --metadata-from-title "%(title)s" --add-metadata -o '~/YouTubeDL/Audio/%(playlist)s/%(title)s-%(upload_date)s.%(ext)s' $url ; then
+        notify-send -u critical "Успешно загружено" "$title - $url"
+    else 
+        notify-send -u critical "Ошибка загрузки" "$title - $url"
+    fi
+else
+    notify-send -u critical "Ошибка обработки ссылки" ""
+fi
