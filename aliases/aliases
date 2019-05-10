@@ -1,3 +1,6 @@
+# SpeedTest
+alias st='curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python -'
+
 # Download best audio single with convertion in mp3
 mp3 () {
     youtube-dl --ignore-errors -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 -o '~/YouTubeDL/Audio/%(title)s.%(ext)s' "$1"
